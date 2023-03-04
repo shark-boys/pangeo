@@ -1,7 +1,6 @@
 var c = "myCanvas"
 function inCanvas(){
     var cap = document.getElementById(c).getContext("2d");
-    var check;
     
     //records mouse whenever over canvas
     cap.canvas.addEventListener("mousemove", function(event){
@@ -17,7 +16,6 @@ function inCanvas(){
         var mouseY = event.clientY - cap.canvas.offsetTop;
         /*var mousedown = document.getElementById('mousedown');
         mousedown.innerHTML = mouseX+" "+mouseY;*/
-        check = true;
         recordPress();
     });
 
@@ -38,9 +36,11 @@ window.addEventListener("load", function(event){
 function recordPress(){
     /*var status = document.getElementById('status');
     status.innerHTML = 1+" "+1;*/
+    isPaint = true;
 }
 
 function recordPickup(){
     /*var status = document.getElementById('status');
     status.innerHTML = 2+" "+2;*/
+    isPaint = false;
 }
