@@ -1,0 +1,21 @@
+body {
+    background-color: bisque;
+  }
+  canvas {
+    float: left;
+    background-color: white;
+  }
+  tools {
+    float: middle;
+    align-items: center;
+  }
+
+  tools.SeperateRow {
+    padding: 100px;
+  }
+  .tool {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+  }
