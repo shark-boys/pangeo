@@ -4,7 +4,7 @@ function getColor(tile) {
     }
     switch(tile.height) {
         case -4:
-            return "#000033";
+            return "#00004F";
         case -3:
             return "#000088";
         case -2:
@@ -14,7 +14,7 @@ function getColor(tile) {
         case 0:
             return "#FFFF00"
         case 1:
-            return "#003300";
+            return "#004F00";
         case 2:
             return "#008800";
         case 3:

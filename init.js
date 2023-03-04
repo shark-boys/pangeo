@@ -2,6 +2,8 @@ const gridSize = 100;
 const canvasSize = 600;
 const numSquares = Math.pow(gridSize, 2);
 
+const tileSize = canvasSize/gridSize;
+
 const ctx = document.getElementById("myCanvas").getContext("2d");
 ctx.canvas.width = canvasSize;
 ctx.canvas.height = canvasSize;
@@ -13,7 +15,7 @@ tiles[i] = new Array(gridSize);
 
 for (y = 0; y < gridSize; y++) {
     for (x = 0; x < gridSize; x++) {
-        tiles[y][x] = new Tile(0, 0, false);
+        tiles[y][x] = new Tile(-1, 0, false);
     }
 }
 
@@ -27,3 +29,5 @@ for (i = 0; i < 4; i++) {
         }
     }
 }
+
+draw();
