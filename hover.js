@@ -1,3 +1,4 @@
+/*
 var c = "myCanvas"
 
 window.onload = function(){
@@ -30,3 +31,4 @@ function hoverOut(e){
     cap.fillStyle = "green";
     cap.fill();
 }
+*/
