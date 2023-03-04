@@ -4,7 +4,7 @@ function createTowardsArray(y, x){
         munY= gridSize % (gridSize + (y-1));
         pluY = y + 1;
     }
-    if((y+1) >= gridSize){
+    else if((y+1) >= gridSize){
         pluY = gridSize % (gridSize + (y+1));  
         munY = y - 1;
     }
