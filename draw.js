@@ -59,7 +59,7 @@ function draw() {
 
     for (y = 0; y < gridSize; y++) {
         for (x = 0; x < gridSize; x++) {
-            if ((x == 0) || (tiles[y][x].height != tiles[y][x - 1].height)) {
+            if ((x == 0) || (tiles[y][x].height != tiles[y][x - 1].height || tiles[y][x].isVolcano || tiles[y][x - 1].isVolcano)) {
                 ctx.fillStyle = rect.color;
                 ctx.fillRect(rect.x, rect.y, rect.width, rectSize);
                 rect.x = x * rectSize;
