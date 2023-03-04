@@ -34,3 +34,27 @@ function simulate(){
         }
     }
 }
+function isTowards(pos, adjTile) {
+    switch(pos) {
+        case 0:
+            return adjTile.direction == 4;
+        case 1:
+            return adjTile.direction == 5;
+        case 2:
+            return adjTile.direction == 6; 
+        case 3:
+            return adjTile.direction == 7;
+        case 4:
+            return adjTile.direction == 0;
+        case 5:
+            return adjTile.direction == 1;
+        case 6:
+            return adjTile.direction == 2;
+        case 7:
+            return adjTile.direction == 3;
+    }
+}
+
+function isAway(pos, adjTile) {
+    return pos == adjTile.direction;
+}
