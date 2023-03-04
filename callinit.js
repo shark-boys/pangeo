@@ -8,15 +8,15 @@ function init(){
     const quadrent4 = [];
 
     for (let i = 0; i<(maxLength * maxHeight)/4;i++){
-        quadrent1[i] = new Tile(0,0);
+        quadrent1[i] = new Tile(0,0,false);
     }
     for (let i = (maxLength * maxHeight)/4; i<(maxLength * maxHeight)/2;i++){
-        quadrent2[i] = new Tile(0,0);
+        quadrent2[i] = new Tile(0,0,false);
     }
    for (let i = (maxHeight * maxLength)/2; i<(3 * (maxLength * maxHeight))/4;i++){
-    quadrent3[i] = new Tile(0,0);
+    quadrent3[i] = new Tile(0,0,false);
     }
     for (let i = (3 * (maxLength * maxHeight))/4; i<(maxLength * maxHeight);i++){
-        quadrent4[i] = new Tile(0,0);
+        quadrent4[i] = new Tile(0,0,false);
     }
 }
