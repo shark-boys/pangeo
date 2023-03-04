@@ -102,3 +102,13 @@ function drawT() {
     ctx.fillStyle = rect.color;
     ctx.fillRect(rect.x, rect.y, rect.width, rectSize);
 }
+
+function switchTectonic(){
+    if (isTectonic){
+        draw();
+        isTectonic = false;
+    } else {
+        drawT();
+        isTectonic = true;
+    }
+}
