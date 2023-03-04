@@ -1,11 +1,14 @@
 body {
     background-color: bisque;
   }
+  h1 {
+    margin-left:200px;
+    font-size: 0.5in;
+
+  }
   canvas {
     float: left;
     background-color: white;
-    width : 50%;
-    height : 50%;
   }
   tools {
     float: middle;

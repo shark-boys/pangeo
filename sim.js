@@ -5,7 +5,7 @@ function simulate(){
         for (y = i * fraction; y < ((i + 1) * fraction); y++) {
             for (x = i * fraction; x < ((i + 1) * fraction); x++) {
                if(heatmap[y][x] >= 2){
-                towardsArray = createTowardsArray(tile[y][x]);
+                towardsArray = createTowardsArray(tiles[y][x], y, x);
                 if(towardsArray.length == 4){
                     collide(towardsArray[0],towardsArray[1]);
                     collide(towardsArray[2],towardsArray[3]);
@@ -15,7 +15,7 @@ function simulate(){
                 }
                }
                else if(heatmap[y][x] == 0){
-                awayArray = createAwayArray(tile[y][x]);
+                awayArray = createAwayArray(tiles[y][x], y, x);
                 if(awayArray.length == 4){
                     submurge(awayArray[0],awayArray[1]);
                     submurge(awayArray[2],awayArray[3]);
@@ -25,7 +25,7 @@ function simulate(){
                 }
                }
                else{
-                newcell = createTowardsArray(tile[y][x]);
+                newcell = createTowardsArray(tiles[y][x], y, x);
                 tile[y][x].height = newcell[0].height;
                 tile[y][x].isVolcano = newcell[0].isVolcano;
                 tile[y][x].direction = newcell[0].direction;
@@ -34,7 +34,7 @@ function simulate(){
         }
     }
 }
-function isTowards(pos, adjTile) {
+function isToward(pos, adjTile) {
     switch(pos) {
         case 0:
             return adjTile.direction == 4;
