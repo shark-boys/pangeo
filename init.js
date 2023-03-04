@@ -24,7 +24,6 @@ for (i = 0; i < 4; i++) {
     fraction = gridSize / 4;
     for (y = i * fraction; y < ((i + 1) * fraction); y++) {
         for (x = i * fraction; x < ((i + 1) * fraction); x++) {
-            console.log("changing" + x + "," + y);
             tiles[y][x].direction = direction;
         }
     }
