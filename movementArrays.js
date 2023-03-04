@@ -2,27 +2,27 @@ function createTowardsArray(y, x){
 
     if ((y-1) < 0){
         munY= gridSize % (gridSize + (y-1));
-        pluY = y;
+        pluY = y + 1;
     }
     if((y+1) >= gridSize){
-        pluY= gridSize % (gridSize + (y+1));  
-        munY= y;
+        pluY = gridSize % (gridSize + (y+1));  
+        munY = y - 1;
     }
     else{
-        pluY = y;
-        munY = y;
+        pluY = y + 1;
+        munY = y - 1;
     }
     if((x-1) < 0){
         munX = gridSize % (gridSize + (x-1));
-        pluX = x;
+        pluX = x + 1;
     }
     else if((x+1) >= gridSize){
         pluX = gridSize % (gridSize + (x+1));
-        munX = x;
+        munX = x - 1;
     }
     else{
-        pluX = x;
-        munX = x;
+        pluX = x + 1;
+        munX = x - 1;
     }
     towardTiles = [];
     countToward = 0;
@@ -68,27 +68,27 @@ function createAwayArray(y ,x){
     countAway = 0;
     if ((y-1) < 0){
         munY= gridSize % (gridSize + (y-1));
-        pluY = y;
+        pluY = y+ 1;
     }
     else if((y+1) >= gridSize){
         pluY= gridSize % (gridSize + (y+1));  
-        munY = y;
+        munY = y - 1;
     }
     else{
-        pluY = y;
-        munY = y;
+        pluY = y + 1;
+        munY = y - 1;
     }
     if((x-1) < 0){
         munX = gridSize % (gridSize + (x-1));
-        pluX = x;
+        pluX = x + 1;
     }
     else if((x+1) >= gridSize){
         pluX = gridSize % (gridSize + (x+1));
-        munX = x;
+        munX = x - 1;
     }
     else{
-        pluX = x;
-        munX = x;
+        pluX = x + 1;
+        munX = x - 1;
     }
     up = tiles[munY][x];
     console.log(x);
