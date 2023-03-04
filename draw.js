@@ -1,5 +1,7 @@
-
 function getColor(tile) {
+    if (tile.isVolcano) {
+        return "#FF0000";
+    }
     switch(tile.height) {
         case -4:
             return "#000033";
@@ -22,7 +24,7 @@ function getColor(tile) {
     }
 }
 
-function draw(ctx, tiles, rectSize, canvasSize) {
+function draw(ctx, tiles, gridSize, canvasSize) {
     rectSize = canvasSize / gridSize;
 
     rect = {
