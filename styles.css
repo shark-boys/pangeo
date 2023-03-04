@@ -22,14 +22,31 @@ body {
   }
 
   .tool {
-    width: 50px;
+    width: 75px;
     height: 50px;
     text-align: center;
     cursor: pointer;
     margin:10px;
-
-    color : black;
-
+    transition-duration: 1;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
 
-  .tool1 {background-color: #008CBA;} 
+  .tool1 {border-color: #00004F;}
+  .tool1:hover{background-color: #00004F; color:white;}
+  .tool2 {border-color: #000088;}
+  .tool2:hover{background-color: #000088; color:white;}
+  .tool3 {border-color: #0000AA;}
+  .tool3:hover {background-color: #0000AA; color:white;}
+  .tool4 {border-color: #0000FF;}
+  .tool4:hover {background-color: #0000FF; color:white;}
+  .tool5 {border-color: #FFFF00;}
+  .tool5:hover {background-color: #FFFF00;}
+  .tool6 {border-color: #004F00;}
+  .tool6:hover{background-color: #004F00; color:white;}
+  .tool7 {border-color: #008800;}
+  .tool7:hover {background-color: #008800;}
+  .tool8 {border-color: #00AA00;}
+  .tool8:hover {background-color: #00AA00;}
+  .tool9 {border-color: #C0C0C0;}
+  .tool9:hover {background-color: #C0C0C0;}
