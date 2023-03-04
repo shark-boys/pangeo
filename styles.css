@@ -9,6 +9,8 @@ body {
   canvas {
     float: left;
     background-color: white;
+    width : 50%;
+    height : 50%;
   }
   tools {
     float: middle;
