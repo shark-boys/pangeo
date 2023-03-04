@@ -24,7 +24,7 @@ function getColor(tile) {
     }
 }
 
-function draw(ctx, tiles, gridSize, canvasSize) {
+function draw() {
     rectSize = canvasSize / gridSize;
 
     rect = {
