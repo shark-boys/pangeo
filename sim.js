@@ -5,6 +5,7 @@ function simulate(){
         for (y = i * fraction; y < ((i + 1) * fraction); y++) {
             for (x = i * fraction; x < ((i + 1) * fraction); x++) {
                if(heatmap[y][x] >= 2){
+                console.log(x);
                 towardsArray = createTowardsArray(tiles[y][x], y, x);
                 if(towardsArray.length == 4){
                     collide(towardsArray[0],towardsArray[1]);
@@ -15,7 +16,7 @@ function simulate(){
                 }
                }
                else if(heatmap[y][x] == 0){
-                awayArray = createAwayArray(tiles[y][x], y, x);
+                awayArray = createAwayArray(y, x);
                 if(awayArray.length == 4){
                     submurge(awayArray[0],awayArray[1]);
                     submurge(awayArray[2],awayArray[3]);
@@ -25,10 +26,10 @@ function simulate(){
                 }
                }
                else{
-                newcell = createTowardsArray(tiles[y][x], y, x);
-                tile[y][x].height = newcell[0].height;
-                tile[y][x].isVolcano = newcell[0].isVolcano;
-                tile[y][x].direction = newcell[0].direction;
+                newcell = createTowardsArray(y, x);
+                tiles[y][x].height = newcell[0].height;
+                tiles[y][x].isVolcano = newcell[0].isVolcano;
+                tiles[y][x].direction = newcell[0].direction;
                }
             }
         }
