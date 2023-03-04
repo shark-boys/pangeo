@@ -1,10 +1,12 @@
 class Tile{
-    constructor(h, dir, vol, w, la){
+    constructor(h, dir, vol, w, la,xcor,ycor){
 this.height = h;
 this.direction = dir;
 this.isVolcano = vol;
 this.weight = w;
 this.isLava = la;
+this.x = xcor;
+this.y = ycor;
 }
 setHeight(newHeight){
     this.height = newHeight;
@@ -21,6 +23,7 @@ setWeight(newWeight){
 setIsLava(newLava){
     this.isLava = newLava;
 }
+
 getHeight(){
     return this.height;
 }
