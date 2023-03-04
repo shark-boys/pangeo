@@ -3,29 +3,33 @@ var isPaint;
 
 function paint(x, y){
     if(isTectonic){
-        tiles[y-1][x-1].setDirection(tool);
-        tiles[y-1][x].setDirection(tool);
-        tiles[y-1][x+1].setDirection(tool);
-        tiles[y][x-1].setDirection(tool);
-        tiles[y][x].setDirection(tool);
-        tiles[y][x+1].setDirection(tool);
-        tiles[y+1][x-1].setDirection(tool);
-        tiles[y+1][x].setDirection(tool);
-        tiles[y+1][x+1].setDirection(tool);
+        if (isInRange(y-1, x-1))    { tiles[y-1][x-1].setDirection(tool); }
+        if (isInRange(y-1, x))      { tiles[y-1][x].setDirection(tool); }
+        if (isInRange(y-1, x+1))    { tiles[y-1][x+1].setDirection(tool); }
+        if (isInRange(y, x-1))      { tiles[y][x-1].setDirection(tool); }
+        if (isInRange(y,x))         { tiles[y][x].setDirection(tool); }
+        if (isInRange(y, x+1))      { tiles[y][x+1].setDirection(tool); }
+        if (isInRange(y+1, x-1))    { tiles[y+1][x-1].setDirection(tool); }
+        if (isInRange(y+1, x))      { tiles[y+1][x].setDirection(tool); }
+        if (isInRange(y+1, x+1))    { tiles[y+1][x+1].setDirection(tool); }
     }
     else {
-        tiles[y-1][x].setHeight(tool);
-        tiles[y-1][x].setHeight(tool);
-        tiles[y-1][x].setHeight(tool);
-        tiles[y][x-1].setHeight(tool);
-        tiles[y][x].setHeight(tool);
-        tiles[y][x+1].setHeight(tool);
-        tiles[y+1][x].setHeight(tool);
-        tiles[y+1][x].setHeight(tool);
-        tiles[y+1][x].setHeight(tool);
+        if (isInRange(y-1, x-1))    { tiles[y-1][x-1].setHeight(tool); }
+        if (isInRange(y-1, x))      { tiles[y-1][x].setHeight(tool); }
+        if (isInRange(y-1, x+1))    { tiles[y-1][x+1].setHeight(tool); }
+        if (isInRange(y, x-1))      { tiles[y][x-1].setHeight(tool); }
+        if (isInRange(y,x))         { tiles[y][x].setHeight(tool); }
+        if (isInRange(y, x+1))      { tiles[y][x+1].setHeight(tool); }
+        if (isInRange(y+1, x-1))    { tiles[y+1][x-1].setHeight(tool); }
+        if (isInRange(y+1, x))      { tiles[y+1][x].setHeight(tool); }
+        if (isInRange(y+1, x+1))    { tiles[y+1][x+1].setHeight(tool); }
     }
     if(isTectonic){drawT();}
     else {draw();}
+}
+
+function isInRange(x, y) {
+    return (x >= 0 && x < gridSize) && (y >= 0 && y < gridSize);
 }
 
 function changeTool(t){

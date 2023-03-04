@@ -1,13 +1,11 @@
 const gridSize = 100;
-const canvasSize = 600;
-const numSquares = Math.pow(gridSize, 2);
+var canvasSize = 600;
+var numSquares = Math.pow(gridSize, 2);
 
 var isTectonic = false;
-const tileSize = canvasSize/gridSize;
+var tileSize = canvasSize/gridSize;
 
 const ctx = document.getElementById("myCanvas").getContext("2d");
-ctx.canvas.width = canvasSize;
-ctx.canvas.height = canvasSize;
 
 const tiles = new Array(gridSize);
 for (var i = 0; i < tiles.length; i++) {
@@ -32,4 +30,6 @@ for (i = 0; i < 2; i++) {
     }
 }
 
-draw();
+
+window.onresize = resizeCanvas;
+resizeCanvas();
