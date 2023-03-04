@@ -1,6 +1,5 @@
 class Tile{
-    constructor(rec, h, dir){
-this.rect = rec;
+    constructor(h, dir){
 this.height = h;
 this.direction = dir;
 }
