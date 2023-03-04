@@ -22,5 +22,10 @@ body {
     height: 50px;
     text-align: center;
     cursor: pointer;
-    margin:10px
+    margin:10px;
+
+    color : black;
+
   }
+
+  .tool1 {background-color: #008CBA;} 

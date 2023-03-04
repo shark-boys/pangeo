@@ -20,7 +20,7 @@ function getColor(tile) {
         case 3:
             return "#00AA00";
         case 4:
-            return "#00FF00";
+            return "#C0C0C0";
     }
 }
 
