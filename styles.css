@@ -31,6 +31,13 @@ body {
     border-radius: 8px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
+  
+  .tool01 {border-color: green};
+  .tool01:hover {background-color: green; color:white;}
+  .tool02 {border-color: red};
+  .tool02:hover {background-color: gray; color:black}
+  .toolRt {border-color: gray}
+  .toolRt:hover {background-color: gray; color:black}
 
   .tool1 {border-color: #00004F;}
   .tool1:hover{background-color: #00004F; color:white;}
@@ -50,3 +57,4 @@ body {
   .tool8:hover {background-color: #00AA00;}
   .tool9 {border-color: #C0C0C0;}
   .tool9:hover {background-color: #C0C0C0;}
+  
