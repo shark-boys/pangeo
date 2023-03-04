@@ -23,7 +23,12 @@ setWeight(newWeight){
 setIsLava(newLava){
     this.isLava = newLava;
 }
-
+setX(newX){
+    this.x = newX;
+}
+setY(newY){
+    this.y = newY;
+}
 getHeight(){
     return this.height;
 }
@@ -38,5 +43,11 @@ getWeight(){
 }
 getIsLava(){
     return this.isLava;
+}
+getX(){
+    return this.x;
+}
+getY(){
+    return this.Y;
 }
 };
