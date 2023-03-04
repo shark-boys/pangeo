@@ -1,3 +1,4 @@
+/*
 var c = "myCanvas"
 
 window.onload = function(){
@@ -8,7 +9,7 @@ function canvasEvent(){
     var canvas = document.getElementById(c);
     var cap = canvas.getContext("2d");
 
-    cap.rect(0,0,800,400);
+    cap.rect(0,0,canvasSize,canvasSize);
 
     canvas.addEventListener("mouseover",hover,false);
     canvas.addEventListener("mouseout",hoverOut,false);
@@ -30,3 +31,4 @@ function hoverOut(e){
     cap.fillStyle = "green";
     cap.fill();
 }
+*/
