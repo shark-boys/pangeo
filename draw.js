@@ -1,12 +1,4 @@
 
-gridSize = 100
-canvasSize = 600
-
-c = document.getElementById("myCanvas");
-ctx = c.getContext("2d");
-ctx.canvas.width = canvasSize;
-ctx.canvas.height = canvasSize;
-
 function getColor(tile) {
     switch(tile.height) {
         case -4:
@@ -30,7 +22,7 @@ function getColor(tile) {
     }
 }
 
-function draw() {
+function draw(ctx, tiles, rectSize, canvasSize) {
     rectSize = canvasSize / gridSize;
 
     rect = {
