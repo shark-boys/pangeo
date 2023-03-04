@@ -2,9 +2,11 @@ function createTowardsArray(y, x){
 
     if ((y-1) < 0){
         munY= gridSize % (gridSize + (y-1));
+        pluY = y;
     }
     if((y+1) >= gridSize){
         pluY= gridSize % (gridSize + (y+1));  
+        munY= y;
     }
     else{
         pluY = y;
@@ -12,9 +14,11 @@ function createTowardsArray(y, x){
     }
     if((x-1) < 0){
         munX = gridSize % (gridSize + (x-1));
+        pluX = x;
     }
     else if((x+1) >= gridSize){
         pluX = gridSize % (gridSize + (x+1));
+        munX = x;
     }
     else{
         pluX = x;
