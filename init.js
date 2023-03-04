@@ -2,6 +2,8 @@ const gridSize = 100;
 const canvasSize = 600;
 const numSquares = Math.pow(gridSize, 2);
 
+const tileSize = canvasSize/gridSize;
+
 const ctx = document.getElementById("myCanvas").getContext("2d");
 ctx.canvas.width = canvasSize;
 ctx.canvas.height = canvasSize;
