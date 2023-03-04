@@ -37,6 +37,7 @@ function recordPress(){
     /*var status = document.getElementById('status');
     status.innerHTML = 1+" "+1;*/
     isPaint = true;
+    paint(mouseX,mouseY);
 }
 
 function recordPickup(){

@@ -2,18 +2,10 @@ var tool;
 var tileSize = canvasSize/gridSize;
 var isPaint;
 
-function paint(x, y, tool){
+function paint(x, y){
     var height = tool;
-    tiles[detYtile()][detXtile()].setHeight(tool);
+    tiles[y][x].setHeight(tool);
     draw();
-}
-
-function detXtile(){
-    return mouseX/tileSize;
-}
-
-function detYtile(){
-    return mouseY/tileSize;
 }
 
 function changeTool(t){
