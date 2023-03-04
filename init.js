@@ -2,6 +2,7 @@ const gridSize = 100;
 const canvasSize = 600;
 const numSquares = Math.pow(gridSize, 2);
 
+var isTectonic = false;
 const tileSize = canvasSize/gridSize;
 
 const ctx = document.getElementById("myCanvas").getContext("2d");
