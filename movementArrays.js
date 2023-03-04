@@ -64,9 +64,11 @@ function createAwayArray(y ,x){
     countAway = 0;
     if ((y-1) < 0){
         munY= gridSize % (gridSize + (y-1));
+        pluY = y;
     }
     else if((y+1) >= gridSize){
         pluY= gridSize % (gridSize + (y+1));  
+        munY = y;
     }
     else{
         pluY = y;
@@ -74,9 +76,11 @@ function createAwayArray(y ,x){
     }
     if((x-1) < 0){
         munX = gridSize % (gridSize + (x-1));
+        pluX = x;
     }
     else if((x+1) >= gridSize){
         pluX = gridSize % (gridSize + (x+1));
+        munX = x;
     }
     else{
         pluX = x;
