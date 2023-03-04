@@ -4,7 +4,7 @@ var isPaint;
 
 function paint(x, y){
     var height = tool;
-    tiles[y][x].setHeight(tool);
+    tiles[y%tileSize][x%tileSize].setHeight(tool);
     draw();
 }
 
