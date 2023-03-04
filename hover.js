@@ -1,9 +1,11 @@
+var c = "myCanvas"
+
 window.onload = function(){
     canvasEvent();
 }
 
 function canvasEvent(){
-    var canvas = document.getElementById("Canvas");
+    var canvas = document.getElementById(c);
     var cap = canvas.getContext("2d");
 
     cap.rect(0,0,800,400);
@@ -14,7 +16,7 @@ function canvasEvent(){
 }
 
 function hover(e){
-    var canvas = document.getElementById("Canvas");
+    var canvas = document.getElementById(c);
     var cap = canvas.getContext("2d");
 
     cap.fillStyle = "red";
@@ -22,7 +24,7 @@ function hover(e){
 }
 
 function hoverOut(e){
-    var canvas = document.getElementById("Canvas");
+    var canvas = document.getElementById(c);
     var cap = canvas.getContext("2d");
 
     cap.fillStyle = "green";
