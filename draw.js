@@ -98,8 +98,6 @@ function drawT() {
                 rect.width += rectSize;
             }
         }
-        ctx.fillStyle = rect.color;
-        ctx.fillRect(rect.x, rect.y, rect.width, rectSize);
     }
     ctx.fillStyle = rect.color;
     ctx.fillRect(rect.x, rect.y, rect.width, rectSize);
