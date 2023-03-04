@@ -4,13 +4,13 @@ this.height = h;
 this.direction = dir;
 this.isVolcano = vol;
 }
-setHeight(height, newHeight){
+setHeight(newHeight){
     this.height = newHeight;
 }
-setDirection(direction, newDirection){
+setDirection(newDirection){
     this.direction = newDirection;
 }
-setIsVolcano(volcano,newBool){
+setIsVolcano(newBool){
     this.isVolcano = newBool;
 }
 getHeight(){

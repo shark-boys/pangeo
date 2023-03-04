@@ -1,4 +1,4 @@
-var tool;
+var tool = 3;
 var tileSize = canvasSize/gridSize;
 var isPaint;
 
