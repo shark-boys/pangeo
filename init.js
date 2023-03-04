@@ -19,9 +19,9 @@ for (y = 0; y < gridSize; y++) {
     }
 }
 
-for (i = 0; i < 4; i++) {
+for (i = 0; i < 2; i++) {
     direction = Math.floor(Math.random() * 8);
-    fraction = gridSize / 4;
+    fraction = gridSize / 2;
     weight = Math.floor(Math.random() * 10);
     for (y = i * fraction; y < ((i + 1) * fraction); y++) {
         for (x = i * fraction; x < ((i + 1) * fraction); x++) {
