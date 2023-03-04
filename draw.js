@@ -100,3 +100,13 @@ function drawT() {
         }
     }
 }
+
+function switchTectonic(){
+    if (isTectonic){
+        draw();
+        isTectonic = false;
+    } else {
+        drawT();
+        isTectonic = true;
+    }
+}
