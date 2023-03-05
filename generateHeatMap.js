@@ -15,68 +15,68 @@ function generateHeatMap() {
                     newX = x;
                     newY = y - 1;
                     if (newY < 0) {
-                        newY = gridSize % (gridSize + newY);
+                        newY = (gridSize + newY) % gridSize;
                     }
                     break;
                 case 1: //up right
                     newX = x + 1;
                     if (newX >= gridSize) {
-                        newX = gridSize % (gridSize + newX);
+                        newX = (gridSize + newX) % gridSize;
                     }
                     newY = y - 1;
                     if (newY < 0) {
-                        newY = gridSize % (gridSize + newY);
+                        newY = (gridSize + newY) % gridSize;
                     }
                     break;
                 case 2: //right
                     newX = x + 1;
                     if (newX >= gridSize) {
-                        newX = gridSize % newX;
+                        newX = newX % gridSize;
                     }
                     newY = y;
                     break;
                 case 3: //down right
                     newX = x + 1;
                     if (newX >= gridSize) {
-                        newX = gridSize % newX;
+                        newX = newX % gridSize;
                     }
                     newY = y + 1;
                     if (newY >= gridSize) {
-                        newY = gridSize % newY;
+                        newY = newY % gridSize;
                     }
                     break;
                 case 4: //down
                     newX = x;
                     newY = y + 1;
                     if (newY >= gridSize) {
-                        newY = gridSize % newY;
+                        newY = newY % gridSize;
                     }
                     break;
                 case 5: //down left
                     newX = x - 1;
                     if (newX < 0) {
-                        newX = gridSize % (gridSize + newX);
+                        newX = (gridSize + newX) % gridSize;
                     }
                     newY = y + 1;
                     if (newY >= gridSize) {
-                        newY = gridSize % newY;
+                        newY = newY % gridSize;
                     }
                     break;
                 case 6: //left
                     newX = x - 1;
                     if (newX < 0) {
-                        newX = gridSize % (gridSize + newX);
+                        newX = (gridSize + newX) % gridSize;
                     }
                     newY = y;
                     break;
                 case 7: //up left
                     newX = x - 1;
                     if (newX < 0) {
-                        newX = gridSize % (gridSize + newX);
+                        newX = (gridSize + newX) % gridSize;
                     }
                     newY = y - 1;
                     if (newY < 0) {
-                        newY = gridSize % (gridSize + newY);
+                        newY = (gridSize + newY) % gridSize;
                     }
                     break;
             }

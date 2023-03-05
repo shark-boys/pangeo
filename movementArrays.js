@@ -28,8 +28,7 @@ function createTowardsArray(y, x){
     countToward = 0;
     console.log(x);
     console.log(y);
-    up = tiles[munY][x];
-    if(isToward(0, up)){
+    if(isToward(0, tiles[munY][x])){
         towardTiles[countToward] = tiles[munY][x];
         countToward++;
     }
