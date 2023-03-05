@@ -37,6 +37,8 @@ function initilize(){
     x.style.display = "block";
     x = document.getElementById("dropdown");
     x.style.display = "none";
+    x = document.getElementById("notBtn name");
+    x.style.display = "block";
 
     draw();
     resizeCanvas();
