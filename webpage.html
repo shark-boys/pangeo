@@ -19,14 +19,14 @@
     <script>
       var intervalId;
       function start() {intervalId = window.setInterval(function(){simulate();}, 1000);}
-      function stop() {clearInterval(intervalId);}
+      function stopfr() {clearInterval(intervalId);}
       function quit() {stop(); initilize();}
     </script>
   </head>
   <body onload="initilize()">
     <!-- Heder for the game -->
     <h1><b>PANGEO</b></h1>
-
+    
     <!-- Displays the game -->
     <div class="grid">
       <div>
@@ -37,7 +37,7 @@
       <tools class="SeperateRow">
       <div class="buttons">
         <button class="tool tool01" onclick="start()">Start</button>
-        <button class="tool tool02" onclick="stop()">Stop</button>
+        <button class="tool tool02" onclick="stopfr()">Stop</button>
         <button class="tool tool0" onclick="quit()">Reset</button>
         <br />
         <br />
