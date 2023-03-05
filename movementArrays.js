@@ -26,36 +26,36 @@ function createTowardsArray(y, x){
     }
     towardTiles = [];
     countToward = 0;
-    if(isToward(0, tiles[munY][x])){
-        towardTiles[countToward] = tiles[munY][x];
+    if(isToward(0, oldTiles[munY][x])){
+        towardTiles[countToward] = oldTiles[munY][x];
         countToward++;
     }
-    if(isToward(1, tiles[munY][pluX])){
-        towardTiles[countToward] = tiles[munY][pluX];
+    if(isToward(1, oldTiles[munY][pluX])){
+        towardTiles[countToward] = oldTiles[munY][pluX];
         countToward++;
     }
-    if(isToward(2, tiles[y][pluX])){
-        towardTiles[countToward] = tiles[y][pluX];
+    if(isToward(2, oldTiles[y][pluX])){
+        towardTiles[countToward] = oldTiles[y][pluX];
         countToward++;
     }
-    if(isToward(3, tiles[pluY][pluX])){
-        towardTiles[countToward] = tiles[pluY][pluX];
+    if(isToward(3, oldTiles[pluY][pluX])){
+        towardTiles[countToward] = oldTiles[pluY][pluX];
         countToward++;
     }
-    if(isToward(4, tiles[pluY][x])){
-        towardTiles[countToward] = tiles[pluY][x];
+    if(isToward(4, oldTiles[pluY][x])){
+        towardTiles[countToward] = oldTiles[pluY][x];
         countToward++;
     }
-    if(isToward(5, tiles[pluY][munX])){
-        towardTiles[countToward] = tiles[pluY][munX];
+    if(isToward(5, oldTiles[pluY][munX])){
+        towardTiles[countToward] = oldTiles[pluY][munX];
         countToward++;
     }
-    if(isToward(6, tiles[y][munX])){
-        towardTiles[countToward] = tiles[y][munX];
+    if(isToward(6, oldTiles[y][munX])){
+        towardTiles[countToward] = oldTiles[y][munX];
         countToward++;
     }
-    if(isToward(7, tiles[munY][munX])){
-        towardTiles[countToward] = tiles[munY][munX];
+    if(isToward(7, oldTiles[munY][munX])){
+        towardTiles[countToward] = oldTiles[munY][munX];
         countToward++;
     }
     return towardTiles;
@@ -87,36 +87,36 @@ function createAwayArray(y, x){
         pluX = x + 1;
         munX = x - 1;
     }
-    if(isAway(0, tiles[munY][x])){
-        awayTiles[countAway] = tiles[munY][x];
+    if(isAway(0, oldTiles[munY][x])){
+        awayTiles[countAway] = oldTiles[munY][x];
         countAway++;
     }
-    if(isAway(1, tiles[munY][pluX])){
-        awayTiles[countAway] = tiles[munY][pluX];
+    if(isAway(1, oldTiles[munY][pluX])){
+        awayTiles[countAway] = oldTiles[munY][pluX];
         countAway++;
     }
-    if(isAway(2, tiles[y][pluX])){
-        awayTiles[countAway] = tiles[y][pluX];
+    if(isAway(2, oldTiles[y][pluX])){
+        awayTiles[countAway] = oldTiles[y][pluX];
         countAway++;
     }
-    if(isAway(3, tiles[pluY][pluX])){
-        awayTiles[countAway] = tiles[pluY][pluX];
+    if(isAway(3, oldTiles[pluY][pluX])){
+        awayTiles[countAway] = oldTiles[pluY][pluX];
         countAway++;
     }
-    if(isAway(4, tiles[pluY][x])){
-        awayTiles[countAway] = tiles[pluY][x];
+    if(isAway(4, oldTiles[pluY][x])){
+        awayTiles[countAway] = oldTiles[pluY][x];
         countAway++;
     }
-    if(isAway(5, tiles[pluY][munX])){
-        awayTiles[countAway] = tiles[pluY][munX];
+    if(isAway(5, oldTiles[pluY][munX])){
+        awayTiles[countAway] = oldTiles[pluY][munX];
         countAway++;
     }
-    if(isAway(6, tiles[y][munX])){
-        awayTiles[countAway] = tiles[y][munX];
+    if(isAway(6, oldTiles[y][munX])){
+        awayTiles[countAway] = oldTiles[y][munX];
         countAway++;
     }
-    if(isAway(7, tiles[munY][munX])){
-        awayTiles[countAway] = tiles[munY][munX];
+    if(isAway(7, oldTiles[munY][munX])){
+        awayTiles[countAway] = oldTiles[munY][munX];
         countAway++;
     }
     return awayTiles;
