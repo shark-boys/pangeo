@@ -7,7 +7,7 @@ var tileSize = canvasSize/gridSize;
 
 const ctx = document.getElementById("myCanvas").getContext("2d");
 
-const tiles = new Array(gridSize);
+var tiles = new Array(gridSize);
 for (var i = 0; i < tiles.length; i++) {
 tiles[i] = new Array(gridSize);
 }
