@@ -36,8 +36,8 @@ body {
   .tool01:hover {background-color: green; color:white;}
   .tool02 {border-color: red};
   .tool02:hover {background-color: gray; color:black}
-  .toolRt {border-color: gray}
-  .toolRt:hover {background-color: gray; color:black}
+  .tool0 {border-color: gray}
+  .tool0:hover {background-color: gray; color:black}
 
   .tool1 {border-color: #00004F;}
   .tool1:hover{background-color: #00004F; color:white;}
