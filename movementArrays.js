@@ -26,8 +26,6 @@ function createTowardsArray(y, x){
     }
     towardTiles = [];
     countToward = 0;
-    console.log(x);
-    console.log(y);
     if(isToward(0, tiles[munY][x])){
         towardTiles[countToward] = tiles[munY][x];
         countToward++;
@@ -49,7 +47,7 @@ function createTowardsArray(y, x){
         countToward++;
     }
     if(isToward(5, tiles[pluY][munX])){
-        towardTiles[countToward] = tiles[munY][munX];
+        towardTiles[countToward] = tiles[pluY][munX];
         countToward++;
     }
     if(isToward(6, tiles[y][munX])){
@@ -62,7 +60,7 @@ function createTowardsArray(y, x){
     }
     return towardTiles;
 }
-function createAwayArray(y ,x){
+function createAwayArray(y, x){
     awayTiles = [];
     countAway = 0;
     if ((y-1) < 0){
@@ -89,10 +87,7 @@ function createAwayArray(y ,x){
         pluX = x + 1;
         munX = x - 1;
     }
-    up = tiles[munY][x];
-    console.log(x);
-    console.log(y);
-    if(isAway(0, up)){
+    if(isAway(0, tiles[munY][x])){
         awayTiles[countAway] = tiles[munY][x];
         countAway++;
     }

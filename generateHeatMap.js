@@ -9,78 +9,7 @@ function generateHeatMap() {
 
     for (y = 0; y < gridSize; y++) {
         for (x = 0; x < gridSize; x++) {
-            var newX, newY;
-            switch(tiles[y][x].direction) {
-                case 0: //up
-                    newX = x;
-                    newY = y - 1;
-                    if (newY < 0) {
-                        newY = (gridSize + newY) % gridSize;
-                    }
-                    break;
-                case 1: //up right
-                    newX = x + 1;
-                    if (newX >= gridSize) {
-                        newX = (gridSize + newX) % gridSize;
-                    }
-                    newY = y - 1;
-                    if (newY < 0) {
-                        newY = (gridSize + newY) % gridSize;
-                    }
-                    break;
-                case 2: //right
-                    newX = x + 1;
-                    if (newX >= gridSize) {
-                        newX = newX % gridSize;
-                    }
-                    newY = y;
-                    break;
-                case 3: //down right
-                    newX = x + 1;
-                    if (newX >= gridSize) {
-                        newX = newX % gridSize;
-                    }
-                    newY = y + 1;
-                    if (newY >= gridSize) {
-                        newY = newY % gridSize;
-                    }
-                    break;
-                case 4: //down
-                    newX = x;
-                    newY = y + 1;
-                    if (newY >= gridSize) {
-                        newY = newY % gridSize;
-                    }
-                    break;
-                case 5: //down left
-                    newX = x - 1;
-                    if (newX < 0) {
-                        newX = (gridSize + newX) % gridSize;
-                    }
-                    newY = y + 1;
-                    if (newY >= gridSize) {
-                        newY = newY % gridSize;
-                    }
-                    break;
-                case 6: //left
-                    newX = x - 1;
-                    if (newX < 0) {
-                        newX = (gridSize + newX) % gridSize;
-                    }
-                    newY = y;
-                    break;
-                case 7: //up left
-                    newX = x - 1;
-                    if (newX < 0) {
-                        newX = (gridSize + newX) % gridSize;
-                    }
-                    newY = y - 1;
-                    if (newY < 0) {
-                        newY = (gridSize + newY) % gridSize;
-                    }
-                    break;
-            }
-            heatMap[newY][newX]++
+            heatMap[y][x] = createTowardsArray(y, x).length;
         }
     }
     return heatMap;
