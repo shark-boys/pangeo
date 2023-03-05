@@ -28,7 +28,7 @@ function collide(tile1,tile2){
             }
         }
     function fourException(tile){
-        if(tile.height == 4 && tile.isLava == true){
+        if(tile.height == 3 && tile.isLava == true){
                 tile.isVolcano = true;
         }
         else if(tile.height < 4){
