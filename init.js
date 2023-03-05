@@ -14,7 +14,7 @@ tiles[i] = new Array(gridSize);
 
 for (y = 0; y < gridSize; y++) {
     for (x = 0; x < gridSize; x++) {
-        tiles[y][x] = new Tile(-1, 0, false,0,false);
+        tiles[y][x] = new Tile(-1, 0, false,0,false, x, y);
     }
 }
 
