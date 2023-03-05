@@ -108,6 +108,7 @@ function switchTectonic(){
     x.style.display = "none";
     x = document.getElementById("altoggle");
     x.style.display = "block";
+    changeTool(0);
 }
 
 function switchTectonic2(){
@@ -117,4 +118,5 @@ function switchTectonic2(){
     x.style.display = "none";
     var x = document.getElementById("toggle");
     x.style.display = "block";
+    changeTool(4);
 }

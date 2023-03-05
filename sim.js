@@ -1,27 +1,51 @@
 function simulate(){
+    oldTiles = JSON.parse(JSON.stringify(tiles));
+    heatMap = generateHeatMap();
+
+    //2nd and 4th collisions
     for (y = 0; y < gridSize; y++) {
         for (x = 0; x < gridSize; x++) {
-            towardsArray = createTowardsArray(y, x);
-            if(towardsArray.length >= 2){
-                if(towardsArray.length == 4){
-                    collide(towardsArray[0],towardsArray[1]);
-                    collide(towardsArray[2],towardsArray[3]);
-                } else {
-                    collide(towardsArray[0],towardsArray[1]);
+            if (heatMap[y][x] >= 2) {
+                if (++tiles[y][x].height > 4) {
+                    tiles[y][x].height = 4;
+                    contributers = createTowardsArray(y,x);
+                    for (i in contributers) {
+                        oldTile = contributers[i];
+                        liveTile = tiles[oldTile.y][oldTile.x];
+                        if (liveTile.height < 4) {
+                            reverseDirection(liveTile);
+                        }
+                    }
                 }
             }
-            else if(towardsArray.length == 0) {
-                awayArray = createAwayArray(y, x);
-                submurge(awayArray[0]);
-            } else {
-                newcell = createTowardsArray(y,x);
-                tiles[y][x].height = newcell[0].height;
-                tiles[y][x].isVolcano = newcell[0].isVolcano;
-                tiles[y][x].direction = newcell[0].direction;
+        }
+    }
+
+    //oldTiles = JSON.parse(JSON.stringify(tiles));
+    //zeros
+    for (y = 0; y < gridSize; y++) {
+        for (x = 0; x < gridSize; x++) {
+            if (heatMap[y][x] == 0) {
+                if (--tiles[y][x].height < -4) {
+                    tiles[y][x].height = -4;
+                }
+            }
+        }
+    }
+
+    //oldTiles = JSON.parse(JSON.stringify(tiles));
+    //ones
+    for (y = 0; y < gridSize; y++) {
+        for (x = 0; x < gridSize; x++) {
+            if (heatMap[y][x] == 1) {
+                
             }
         }
     }
     draw();
+}
+function reverseDirection(tile) {
+    tile.direction = (tile.direction + 4) % 8
 }
 function isToward(pos, adjTile) {
     switch(pos) {
