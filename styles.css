@@ -99,6 +99,22 @@ tools {
 }
 
 .compass {
+
+}
+
+.container {
   margin-top: 50px;
-  width: 30%;
+  margin-left: 90px;
+  position: relative;
+}
+
+.gif {
+  position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.container:hover .gif {
+  display: block;
 }
