@@ -6,6 +6,9 @@ function simulate(){
     for (y = 0; y < gridSize; y++) {
         for (x = 0; x < gridSize; x++) {
             if (heatMap[y][x] >= 2) {
+                if(tiles[y][x].isLava && tiles[y][x].height){
+                    tiles[y][x].isVolcano == true;
+                }
                 if (++tiles[y][x].height > 4) {
                     tiles[y][x].height = 4;
                     contributers = createTowardsArray(y,x);
@@ -13,7 +16,8 @@ function simulate(){
                         oldTile = contributers[i];
                         liveTile = tiles[oldTile.y][oldTile.x];
                         if (liveTile.height < 4) {
-                            reverseDirection(liveTile);
+                            randomDir = Math.floor(Math.random()*2);
+                            randomizeDirection(liveTile,randomDir);
                         }
                     }
                 }
@@ -84,6 +88,16 @@ function findLava() {
 
 function reverseDirection(tile) {
     tile.direction = (tile.direction + 4) % 8
+}
+function randomizeDirection(tile,rand) {
+    switch(rand){
+        case 0:
+            tile.direction = (tile.direction + 1) % 8;
+        case 1:
+            tile.direction = (tile.direction + 7) % 8;
+        case 2:
+            tile.direction = tile.direction;
+    }
 }
 function isToward(pos, adjTile) {
     switch(pos) {
