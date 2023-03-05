@@ -36,9 +36,9 @@
 
       <tools class="SeperateRow">
       <div class="buttons">
-        <button class="tool" onclick="start()">Start</button>
-        <button class="tool" onclick="stop()">Stop</button>
-        <button class="tool" onclick="quit()">Reset</button>
+        <button class="tool tool01" onclick="start()">Start</button>
+        <button class="tool tool02" onclick="stop()">Stop</button>
+        <button class="tool tool0" onclick="quit()">Reset</button>
         <br />
         <br />
 
@@ -58,27 +58,26 @@
           <button class="tool tool9" onclick="changeTool(4)">Mountains</button>
           <br />
           <br />
-          <button class="tool" onclick="switchTectonic()" style="margin-left: 110px">Switch View</button>
+          <button class="tool toolST" onclick="switchTectonic()" style="margin-left: 110px">Switch View</button>
         </div>
         <div id="altoggle">
-          <button class="tool tool11" onclick="changeTool(1)">Up Right</button>
-          <button class="tool tool12" onclick="changeTool(1)">Up</button>
-          <button class="tool tool13" onclick="changeTool(1)">Up Right</button>
+          <button class="tool toolUL" onclick="changeTool(7)">Up left</button>
+          <button class="tool toolU" onclick="changeTool(0)">Up</button>
+          <button class="tool toolUR" onclick="changeTool(1)">Up Right</button>
           <br />
           <br />
-          <button class="tool tool14" onclick="changeTool(1)">Left</button>
-          <button class="tool tool15" onclick="changeTool(1)">Nothing.</button>
-          <button class="tool tool16" onclick="changeTool(1)">Right</button>
+          <button class="tool toolL" onclick="changeTool(6)">Left</button>
+          <button class="tool tool15">Nothing.</button>
+          <button class="tool toolR" onclick="changeTool(2)">Right</button>
           <br />
           <br />
-          <button class="tool tool17" onclick="changeTool(1)">Down Left</button>
-          <button class="tool tool11" onclick="changeTool(1)">Down</button>
-          <button class="tool tool11" onclick="changeTool(1)">Down Right</button>
+          <button class="tool toolDL" onclick="changeTool(5)">Down Left</button>
+          <button class="tool toolD" onclick="changeTool(4)">Down</button>
+          <button class="tool toolDR" onclick="changeTool(3)">Down Right</button>
           <br />
           <br />
-          <button class="tool" onclick="switchTectonic2()" style="margin-left: 110px">Switch View</button>
+          <button class="tool toolST1" onclick="switchTectonic2()" style="margin-left: 110px">Switch View</button>
         </div>
-
       </div>
     </div>
     <script type="text/javascript" src="init.js"></script>

@@ -60,6 +60,29 @@ tools {
   .tool9 {border-color: #C0C0C0;}
   .tool9:hover {background-color: #C0C0C0;}
 
+  .toolU {border-color: #ff0000;}
+  .toolU:hover{background-color: #ff0000; color:white;}
+  .toolUR {border-color: #ffa500;}
+  .toolUR:hover{background-color: #ffa500; color:white;}
+  .toolR {border-color: #ffff00;}
+  .toolR:hover {background-color: #ffff00;}
+  .toolDR {border-color: #008000;}
+  .toolDR:hover {background-color: #008000; color:white;}
+  .toolD {border-color: #0000ff;}
+  .toolD:hover {background-color: #0000ff; color: white;}
+  .toolDL {border-color: #00ffff;}
+  .toolDL:hover{background-color: #00ffff; color:white;}
+  .toolL {border-color: #460082;}
+  .toolL:hover {background-color: #460082; color: white;}
+  .toolUL {border-color: #ee82ee;}
+  .toolUL:hover {background-color: #ee82ee;}
+
+  .toolST {border-color: #000000;}
+  .toolST:hover {background-color: #000000; color: white;}
+  .toolST1 {border-color: #000000;;}
+  .toolST1:hover {background-color: #000000;; color: white;}
+
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
