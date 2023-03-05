@@ -29,11 +29,15 @@ function initilize(){
         }
     }
 
-    draw();
-    resizeCanvas();
 
     x = document.getElementById("altoggle");
     x.style.display = "none";
+    isTectonic = false;
+    x = document.getElementById("toggle");
+    x.style.display = "block";
+
+    draw();
+    resizeCanvas();
 }
 
 window.onresize = resizeCanvas;
