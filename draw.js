@@ -1,5 +1,5 @@
 function getColor(tile) {
-    if (tile.isVolcano) {
+    if (tile.isVolcano && tile.isLava) {
         return "#FF0000";
     }
     switch(tile.height) {
