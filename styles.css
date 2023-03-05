@@ -83,10 +83,37 @@ tools {
   .tool15 {border-color: rgb(255, 64, 137);}
   .tool15:hover {background-color: rgb(255, 64, 137); color:#0000ff;}
 
+  .it {border-color: #000000;}
+  .it:hover {background-color: #000000; color: white;}
+
+  .toolTipText {
+    background-color: black;
+    color: white;
+
+    cursor: pointer;
+    padding: 10px;
+    transition-duration: 1;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  .toolTip0 {visibility: hidden;}
+  .it0:hover .toolTip0 {visibility: visible;}
+
+  .toolTip1 {visibility: hidden;}
+  .it1:hover .toolTip1 {visibility: visible;}
+
+  .toolTip2 {visibility: hidden;}
+  .it2:hover .toolTip2 {visibility: visible;}
+
+  .toolTip3 {visibility: hidden;}
+  .it3:hover .toolTip3 {visibility: visible;}
+
+  .toolTip4 {visibility: hidden;}
+  .it4:hover .toolTip4 {visibility: visible;}
 
 .grid {
   display: grid;
-  grid-template-columns: 2.5fr 2fr .75fr;
+  grid-template-columns: 3fr 2fr 2fr;
   max-width: 1800px;
   min-width: 1100px;
   max-height: 1000px;
@@ -94,7 +121,7 @@ tools {
 }
 
 .buttons {
-  padding-left: 100px;
+  padding-left: 10px;
 }
 
 .container {
@@ -117,10 +144,13 @@ tools {
 .dropdown {
   width: 75px;
   height: 50px;
-  text-align: right;
   cursor: pointer;
   margin:10px;
   transition-duration: 1;
   border-radius: 8px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.dropdown:hover {
+  background-color: black;
+  color: white;
 }
