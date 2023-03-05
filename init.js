@@ -37,7 +37,7 @@ function initilize(){
     x.style.display = "block";
 
     draw();
-    resizeCanvas();resizeCanvas();
+    resizeCanvas();
 }
 
 window.onresize = resizeCanvas;
