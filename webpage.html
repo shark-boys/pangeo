@@ -16,6 +16,12 @@
     <script type="text/javascript" src="collisionfunctions.js"></script>
     <script type="text/javascript" src="movementArrays.js"></script>
     <script type="text/javascript" src="sim.js"></script>
+    <script>
+      var intervalId;
+      function start() {intervalId = window.setInterval(function(){simulate();}, 1000);}
+      function stop() {clearInterval(intervalId);}
+      function quit() {stop(); initilize();}
+    </script>
   </head>
   <body onload="initilize()">
     <!-- Heder for the game -->
@@ -30,9 +36,9 @@
 
       <tools class="SeperateRow">
       <div class="buttons">
-        <button class="tool">Start</button>
-        <button class="tool">Stop</button>
-        <button class="tool">Reset</button>
+        <button class="tool" onclick="start()">Start</button>
+        <button class="tool" onclick="stop()">Stop</button>
+        <button class="tool" onclick="quit()">Reset</button>
         <br />
         <br />
 
