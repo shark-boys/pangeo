@@ -1,11 +1,11 @@
 function createTowardsArray(y, x){
 
     if ((y-1) < 0){
-        munY= gridSize % (gridSize + (y-1));
+        munY= (gridSize + (y-1)) % gridSize;
         pluY = y + 1;
     }
     else if((y+1) >= gridSize){
-        pluY = gridSize % (gridSize + (y+1));  
+        pluY = (y+1) % gridSize;  
         munY = y - 1;
     }
     else{
@@ -13,11 +13,11 @@ function createTowardsArray(y, x){
         munY = y - 1;
     }
     if((x-1) < 0){
-        munX = gridSize % (gridSize + (x-1));
+        munX = (gridSize + (x-1)) % gridSize;
         pluX = x + 1;
     }
     else if((x+1) >= gridSize){
-        pluX = gridSize % (gridSize + (x+1));
+        pluX = (x+1) % gridSize;
         munX = x - 1;
     }
     else{
@@ -67,11 +67,11 @@ function createAwayArray(y ,x){
     awayTiles = [];
     countAway = 0;
     if ((y-1) < 0){
-        munY= gridSize % (gridSize + (y-1));
+        munY= (gridSize + (y-1)) % gridSize;
         pluY = y + 1;
     }
     else if((y+1) >= gridSize){
-        pluY= gridSize % (gridSize + (y+1));  
+        pluY= (y+1) % gridSize;  
         munY = y - 1;
     }
     else{
@@ -79,11 +79,11 @@ function createAwayArray(y ,x){
         munY = y - 1;
     }
     if((x-1) < 0){
-        munX = gridSize % (gridSize + (x-1));
+        munX = (gridSize + (x-1))% gridSize;
         pluX = x + 1;
     }
     else if((x+1) >= gridSize){
-        pluX = gridSize % (gridSize + (x+1));
+        pluX = (x+1) % gridSize;
         munX = x - 1;
     }
     else{
