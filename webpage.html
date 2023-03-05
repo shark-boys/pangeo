@@ -18,48 +18,45 @@
     <script type="text/javascript" src="sim.js"></script>
   </head>
   <body>
-
     <!-- Heder for the game -->
     <h1>PANGEO</h1>
 
     <!-- Displays the game -->
-    <canvas
-      id="myCanvas"
-      style="border: 5px solid #000000"
-      ></canvas>
-
+    <div class="grid">
+      <div>
+        <canvas id="myCanvas" style="border: 5px solid #000000"></canvas>
+      </div>
       <!-- Buttons to switch the tools -->
-      <tools class="SeperateRow">
+      <div class="buttons">
         <button class="tool">Start</button>
         <button class="tool">Stop</button>
         <button class="tool">Reset</button>
-        <button class="tool" onclick="switchTectonic()">Switch View</button>
-      </tools>
-      <br />
-      <br />
-      <br />
-      <tools class="SeperateRow">
+        <br />
+        <br />
         <button class="tool tool1" onclick="changeTool(-4)">Abyss</button>
         <button class="tool tool2" onclick="changeTool(-3)">Deep Waters</button>
         <button class="tool tool3" onclick="changeTool(-2)">Open Oceans</button>
-      </tools>
-      <br />
-      <br />
-      <br />
-      <tools class="SeperateRow">
+        <br />
+        <br />
         <button class="tool tool4" onclick="changeTool(-1)">Shallow</button>
         <button class="tool tool5" onclick="changeTool(0)">Beach</button>
         <button class="tool tool6" onclick="changeTool(1)">Low Lands</button>
-      </tools>
-      <br />
-      <br />
-      <br />
-      <tools class="SeperateRow">
+        <br />
+        <br />
         <button class="tool tool7" onclick="changeTool(2)">Plains</button>
         <button class="tool tool8" onclick="changeTool(3)">Hills</button>
         <button class="tool tool9" onclick="changeTool(4)">Mountains</button>
-      </tools>
-      <script type="text/javascript" src="init.js"></script>
-    </body>
-    </html>
-    
+        <br />
+        <br />
+        <button
+          class="tool"
+          onclick="switchTectonic()"
+          style="margin-left: 110px"
+        >
+          Switch View
+        </button>
+      </div>
+    </div>
+    <script type="text/javascript" src="init.js"></script>
+  </body>
+</html>
