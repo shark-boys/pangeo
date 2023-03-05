@@ -21,19 +21,28 @@ function simulate(){
         }
     }
 
-    //oldTiles = JSON.parse(JSON.stringify(tiles));
     //zeros
     for (y = 0; y < gridSize; y++) {
         for (x = 0; x < gridSize; x++) {
             if (heatMap[y][x] == 0) {
                 if (--tiles[y][x].height < -4) {
                     tiles[y][x].height = -4;
+                    modifier = Math.floor(Math.random() * 4) - 2
+                    tiles[y][x].direction = (tiles[y][x].direction + modifier) % 8;
+                    tiles[y][x].isVolcano = true;
+                    contributers = createAwayArray(y, x);
+                    for (i in contributers) {
+                        oldTile = contributers[i];
+                        liveTile = tiles[oldTile.y][oldTile.x];
+                        if (liveTile.height > -4) {
+                            liveTile.height--;
+                        }
+                    }
                 }
             }
         }
     }
 
-    //oldTiles = JSON.parse(JSON.stringify(tiles));
     //ones
     for (y = 0; y < gridSize; y++) {
         for (x = 0; x < gridSize; x++) {
@@ -42,8 +51,37 @@ function simulate(){
             }
         }
     }
-    draw();
+
+    //volcanos
+    for (y = 0; y < gridSize; y++) {
+        for (x = 0; x < gridSize; x++) {
+            if (tiles[y][x].isVolcano && tiles[y][x].isLava) {
+                tile[y][x] += 3;
+                if (tiles[y][x].height > 4) {
+                    tiles[y][x].height = 4;
+                    tiles[y][x].isVolcano = false;
+                }
+            }
+        }
+    }
+
+    if (isTectonic) {
+        drawT();
+    } else {
+        draw();
+    }
 }
+
+function findLava() {
+    for (y = 0; y < gridSize; y++) {
+        for (x = 0; x < gridSize; x++) {
+            if (tiles[y][x].isLava) {
+                console.log("Volcano at " + x + ", " + y);
+            }
+        }
+    }
+}
+
 function reverseDirection(tile) {
     tile.direction = (tile.direction + 4) % 8
 }
