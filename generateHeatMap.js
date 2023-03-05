@@ -20,8 +20,8 @@ function generateHeatMap() {
                     break;
                 case 1: //up right
                     newX = x + 1;
-                    if (newX < 0) {
-                        newX = gridSize % (gridSize + newY);
+                    if (newX >= gridSize) {
+                        newX = gridSize % (gridSize + newX);
                     }
                     newY = y - 1;
                     if (newY < 0) {
