@@ -1,10 +1,17 @@
-body {
+html {
   background-color: bisque;
+  background-image: url(https://thumbs.dreamstime.com/b/vintage-antique-historical-world-map-vintage-old-colorful-world-map-america-map-asia-map-africa-map-australia-map-europe-map-south-214907976.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+/*body {
+  background-color: bisque;
+}*/
+
 h1 {
   margin-left:200px;
   font-size: 0.5in;
-
+  font-family:tahoma;
 }
 canvas {
   background-color: white;
@@ -26,24 +33,32 @@ tools {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-.tool1 {border-color: #00004F;}
-.tool1:hover{background-color: #00004F; color:white;}
-.tool2 {border-color: #000088;}
-.tool2:hover{background-color: #000088; color:white;}
-.tool3 {border-color: #0000AA;}
-.tool3:hover {background-color: #0000AA; color:white;}
-.tool4 {border-color: #0000FF;}
-.tool4:hover {background-color: #0000FF; color:white;}
-.tool5 {border-color: #FFFF00;}
-.tool5:hover {background-color: #FFFF00;}
-.tool6 {border-color: #004F00;}
-.tool6:hover{background-color: #004F00; color:white;}
-.tool7 {border-color: #008800;}
-.tool7:hover {background-color: #008800;}
-.tool8 {border-color: #00AA00;}
-.tool8:hover {background-color: #00AA00;}
-.tool9 {border-color: #C0C0C0;}
-.tool9:hover {background-color: #C0C0C0;}
+  
+  .tool01 {border-color: green};
+  .tool01:hover {background-color: green; color:white;}
+  .tool02 {border-color: red};
+  .tool02:hover {background-color: gray; color:black}
+  .tool0 {border-color: gray}
+  .tool0:hover {background-color: gray; color:black}
+
+  .tool1 {border-color: #00004F;}
+  .tool1:hover{background-color: #00004F; color:white;}
+  .tool2 {border-color: #000088;}
+  .tool2:hover{background-color: #000088; color:white;}
+  .tool3 {border-color: #0000AA;}
+  .tool3:hover {background-color: #0000AA; color:white;}
+  .tool4 {border-color: #0000FF;}
+  .tool4:hover {background-color: #0000FF; color:white;}
+  .tool5 {border-color: #FFFF00;}
+  .tool5:hover {background-color: #FFFF00;}
+  .tool6 {border-color: #004F00;}
+  .tool6:hover{background-color: #004F00; color:white;}
+  .tool7 {border-color: #008800;}
+  .tool7:hover {background-color: #008800;}
+  .tool8 {border-color: #00AA00;}
+  .tool8:hover {background-color: #00AA00;}
+  .tool9 {border-color: #C0C0C0;}
+  .tool9:hover {background-color: #C0C0C0;}
 
 .grid {
   display: grid;
