@@ -27,23 +27,21 @@ function getColor(tile) {
 function getTColor(tile) {
     switch(tile.direction) {
         case 0:
-            return "#00004F";
+            return "#FF0000";
         case 1:
-            return "#000088";
+            return "#FFA500";
         case 2:
-            return "#0000AA";
+            return "#FFFF00";
         case 3:
-            return "#0000FF"
+            return "#008000"
         case 4:
-            return "#FFFF00"
+            return "#0000FF"
         case 5:
-            return "#004F00";
+            return "#00FFFF";
         case 6:
-            return "#008800";
+            return "#460082";
         case 7:
-            return "#00AA00";
-        case 8:
-            return "#00FF00";
+            return "#EE82EE";
     }
 }
 

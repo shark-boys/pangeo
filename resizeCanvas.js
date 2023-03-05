@@ -3,5 +3,9 @@ function resizeCanvas() {
     ctx.canvas.width = canvasSize;
     ctx.canvas.height = canvasSize;
     tileSize = canvasSize / gridSize;
-    draw();
+    if (isTectonic) {
+        drawT();
+    } else {
+        draw();
+    }
 }
