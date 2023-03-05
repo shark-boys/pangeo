@@ -17,22 +17,25 @@
     <script type="text/javascript" src="movementArrays.js"></script>
     <script type="text/javascript" src="sim.js"></script>
   </head>
-  <body>
+  <body onload="initilize()">
     <!-- Heder for the game -->
-    <h1>PANGEO</h1>
+    <h1><b>PANGEO</b></h1>
 
     <!-- Displays the game -->
     <div class="grid">
       <div>
-        <canvas id="myCanvas" style="border: 5px solid #000000"></canvas>
+        <canvas id="myCanvas" style="border: 5px solid #632f12"></canvas>
       </div>
       <!-- Buttons to switch the tools -->
+
+      <tools class="SeperateRow">
       <div class="buttons">
         <button class="tool">Start</button>
         <button class="tool">Stop</button>
         <button class="tool">Reset</button>
         <br />
         <br />
+
         <button class="tool tool1" onclick="changeTool(-4)">Abyss</button>
         <button class="tool tool2" onclick="changeTool(-3)">Deep Waters</button>
         <button class="tool tool3" onclick="changeTool(-2)">Open Oceans</button>
@@ -60,3 +63,4 @@
     <script type="text/javascript" src="init.js"></script>
   </body>
 </html>
+
