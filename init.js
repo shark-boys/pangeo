@@ -26,7 +26,7 @@ function initilize(){
         for (y = i * fraction; y < ((i + 1) * fraction); y++) {
             for (x = i * fraction; x < ((i + 1) * fraction); x++) {
                 tiles[y][x].direction = direction;
-                tiles[y][x].weight = weight;
+                tiles[y][x].weight = weight;                
             }
         }
     }
