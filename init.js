@@ -17,6 +17,10 @@ function initilize(){
         for (x = 0; x < gridSize; x++) {
             tiles[y][x] = new Tile(-1, 0, false,0,false, x, y);
             tiles[y][x].weight = Math.floor(Math.random() * 10);
+            lavaBool = Math.floor(Math.random()*100)
+            if (lavaBool == 1){
+                tiles[y][x].isLava == true;
+            }
         }
     }
 
