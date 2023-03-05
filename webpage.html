@@ -17,6 +17,7 @@
     <script type="text/javascript" src="collisionfunctions.js"></script>
     <script type="text/javascript" src="movementArrays.js"></script>
     <script type="text/javascript" src="sim.js"></script>
+    <script type="text/javascript" src="notBtn.js"></script>
     <script>
       var intervalId;
       function start() {
@@ -31,10 +32,6 @@
         stop();
         initilize();
       }
-      function sharkUp() {
-        dub = window.open("https://img.freepik.com/free-vector/cute-shark-with-doughnut_138676-3244.jpg"
-        ,"Ratting","width=400,height=400,left=150,top=200,toolbar=0,status=0,");
-      } 
     </script>
   </head>
   <body onload="initilize()">
@@ -82,6 +79,9 @@
           <br />
           <button class="tool toolL" onclick="changeTool(6)">Left</button>
           <button class="tool tool15" onclick="sharkUp()">Nothing.</button>
+          <div id="audio">
+            <audio controls autoplay><source scr="https://www.youtube.com/watch?v=hKJV8BRb51M"></audio>
+          </div>
           <button class="tool toolR" onclick="changeTool(2)">Right</button>
           <br />
           <br />
