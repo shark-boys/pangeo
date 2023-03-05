@@ -17,14 +17,8 @@ function simulate(){
                }
                else if(heatmap[y][x] == 0){
                 awayArray = createAwayArray(y, x);
-                if(awayArray.length == 4){
-                    submurge(awayArray[0],awayArray[1]);
-                    submurge(awayArray[2],awayArray[3]);
+                submurge(awayArray[0]);
                 }
-                else{
-                    submurge(awayArray[0],awayArray[1]);
-                }
-               }
                else{
                 newcell = createTowardsArray(y,x);
                 tiles[y][x].height = newcell[0].height;
