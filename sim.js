@@ -1,5 +1,8 @@
+var towardsArray;
+var awayArray;
 function simulate(){
     heatmap = generateHeatMap();
+    drawHeatMap(heatmap);
     for (i = 0; i < 2; i++) {
         fraction = gridSize / 2;
         for (y = i * fraction; y < ((i + 1) * fraction); y++) {
