@@ -1,10 +1,17 @@
-body {
+html {
   background-color: bisque;
+  background-image: url(https://thumbs.dreamstime.com/b/vintage-antique-historical-world-map-vintage-old-colorful-world-map-america-map-asia-map-africa-map-australia-map-europe-map-south-214907976.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+/*body {
+  background-color: bisque;
+}*/
+
 h1 {
   margin-left:200px;
   font-size: 0.5in;
-
+  font-family:tahoma;
 }
 canvas {
   background-color: white;
