@@ -19,6 +19,7 @@
     <script type="text/javascript" src="sim.js"></script>
     <script type="text/javascript" src="notBtn.js"></script>
     <script type="text/javascript" src="export.js"></script>
+    <script type="text/javascript" src="dropdown.js"></script>
     <script>
       var intervalId;
       function start() {
@@ -46,7 +47,6 @@
         <canvas id="myCanvas" style="border: 5px solid #632f12"></canvas>
       </div>
       <!-- Buttons to switch the tools -->
-
       <div class="buttons">
         <button class="tool tool01" onclick="start()"><b>Start</b></button>
         <button class="tool tool02" onclick="stopfr()"><b>Stop</b></button>
@@ -98,6 +98,26 @@
           <img class="gif" src="images/Color Compass Spinning.gif">
         </div>
       </div>
+      <div>
+      <button class="dropdown drop" onclick="showSharks()">Presets:</button>
+      <br />
+      <br />
+        <div id="dropdown">
+          <button class="tool it0" onclick="importPreset(0);showSharks()">preset 0</button>
+          <br />
+          <br />
+          <button class="tool it1" onclick="importPreset(1);showSharks()">preset 1</button>
+          <br />
+          <br />
+          <button class="tool it2" onclick="importPreset(2);showSharks()">preset 2</button>
+          <br />
+          <br />
+          <button class="tool it3" onclick="importPreset(3);showSharks()">preset 3</button>
+          <br />
+          <br />
+          <button class="tool it3" onclick="importPreset(4);showSharks()">preset 4</button>
+        </div>
+        </div>
     </div>
     <script type="text/javascript" src="init.js"></script>
   </body>

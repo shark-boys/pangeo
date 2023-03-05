@@ -35,7 +35,7 @@ function initilize(){
     isTectonic = false;
     x = document.getElementById("toggle");
     x.style.display = "block";
-    x = document.getElementById("audio");
+    x = document.getElementById("dropdown");
     x.style.display = "none";
 
     draw();
