@@ -14,12 +14,12 @@ tiles[i] = new Array(gridSize);
 
 for (y = 0; y < gridSize; y++) {
     for (x = 0; x < gridSize; x++) {
-        tiles[y][x] = new Tile(-1, 0, false,0,false);
+        tiles[y][x] = new Tile(-1, 0, false,0,false, x, y);
     }
 }
 
 for (i = 0; i < 2; i++) {
-    direction = Math.floor(Math.random() * 8);
+    direction = 2; //Math.floor(Math.random() * 8);
     fraction = gridSize / 2;
     weight = Math.floor(Math.random() * 10);
     for (y = i * fraction; y < ((i + 1) * fraction); y++) {

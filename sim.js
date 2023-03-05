@@ -1,39 +1,27 @@
 function simulate(){
-    heatmap = generateHeatMap();
-    for (i = 0; i < 2; i++) {
-        fraction = gridSize / 2;
-        for (y = i * fraction; y < ((i + 1) * fraction); y++) {
-            for (x = i * fraction; x < ((i + 1) * fraction); x++) {
-               if(heatmap[y][x] >= 2){
-                console.log(x);
-                towardsArray = createTowardsArray(tiles[y][x], y, x);
+    for (y = 0; y < gridSize; y++) {
+        for (x = 0; x < gridSize; x++) {
+            towardsArray = createTowardsArray(y, x);
+            if(towardsArray.length >= 2){
                 if(towardsArray.length == 4){
                     collide(towardsArray[0],towardsArray[1]);
                     collide(towardsArray[2],towardsArray[3]);
-                }
-                else{
+                } else {
                     collide(towardsArray[0],towardsArray[1]);
                 }
-               }
-               else if(heatmap[y][x] == 0){
+            }
+            else if(towardsArray.length == 0) {
                 awayArray = createAwayArray(y, x);
-                if(awayArray.length == 4){
-                    submurge(awayArray[0],awayArray[1]);
-                    submurge(awayArray[2],awayArray[3]);
-                }
-                else{
-                    submurge(awayArray[0],awayArray[1]);
-                }
-               }
-               else{
-                newcell = createTowardsArray(y, x);
+                submurge(awayArray[0]);
+            } else {
+                newcell = createTowardsArray(y,x);
                 tiles[y][x].height = newcell[0].height;
                 tiles[y][x].isVolcano = newcell[0].isVolcano;
                 tiles[y][x].direction = newcell[0].direction;
-               }
             }
         }
     }
+    draw();
 }
 function isToward(pos, adjTile) {
     switch(pos) {
