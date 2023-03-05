@@ -19,7 +19,7 @@ for (y = 0; y < gridSize; y++) {
 }
 
 for (i = 0; i < 2; i++) {
-    direction = Math.floor(Math.random() * 8);
+    direction = 2; //Math.floor(Math.random() * 8);
     fraction = gridSize / 2;
     weight = Math.floor(Math.random() * 10);
     for (y = i * fraction; y < ((i + 1) * fraction); y++) {

@@ -1,21 +1,16 @@
-var towardsArray;
-var awayArray;
 function simulate(){
-    heatmap = generateHeatMap();
-    drawHeatMap(heatmap);
     for (y = 0; y < gridSize; y++) {
         for (x = 0; x < gridSize; x++) {
-            if(heatmap[y][x] >= 2){
-                towardsArray = createTowardsArray(y, x);
+            towardsArray = createTowardsArray(y, x);
+            if(towardsArray.length >= 2){
                 if(towardsArray.length == 4){
                     collide(towardsArray[0],towardsArray[1]);
                     collide(towardsArray[2],towardsArray[3]);
-                }
-                else{
+                } else {
                     collide(towardsArray[0],towardsArray[1]);
                 }
             }
-            else if(heatmap[y][x] == 0) {
+            else if(towardsArray.length == 0) {
                 awayArray = createAwayArray(y, x);
                 submurge(awayArray[0]);
             } else {
@@ -26,6 +21,7 @@ function simulate(){
             }
         }
     }
+    draw();
 }
 function isToward(pos, adjTile) {
     switch(pos) {
