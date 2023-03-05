@@ -26,6 +26,9 @@ function initilize(){
 
     draw();
     resizeCanvas();
+
+    x = document.getElementById("altoggle");
+    x.style.display = "none";
 }
 
 window.onresize = resizeCanvas;

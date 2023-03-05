@@ -102,11 +102,19 @@ function drawT() {
 }
 
 function switchTectonic(){
-    if (isTectonic){
-        draw();
-        isTectonic = false;
-    } else {
-        drawT();
-        isTectonic = true;
-    }
+    drawT();
+    isTectonic = true;
+    var x = document.getElementById("toggle");
+    x.style.display = "none";
+    x = document.getElementById("altoggle");
+    x.style.display = "block";
+}
+
+function switchTectonic2(){
+    draw();
+    isTectonic = false;
+    x = document.getElementById("altoggle");
+    x.style.display = "none";
+    var x = document.getElementById("toggle");
+    x.style.display = "block";
 }
